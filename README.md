@@ -96,6 +96,7 @@ The argument list is as following:
 	-b : Output Binary Name, The script creates a zip file that can be moved across
 	-v : VTK installation directory
 	-g : GCC directory path
+	-c : Number of cores to be used for the compilation.
 
-Run the command as below 
-	./build.sh -s=/Users/njetty/Desktop/CC3D/Compucell3D -p=/Users/njetty/Desktop/CC3D/CC3D_install/CC3D_3.7.5 -d=/Users/njetty/Desktop/CC3D/macdeps/Deps -b=CC3D_3.7.5_MacOSX_10.11 -c=8
+Example command is as below 
+	./build.sh -s=/Users/njetty/Desktop/CC3D/Compucell3D -p=/Users/njetty/Desktop/CC3D/CC3D_install/CC3D_3.7.5 -d=/Users/njetty/Desktop/CC3D/macdeps/Deps -b=CC3D_3.7.5_MacOSX_10.11 -c=8 -g /Users/njetty/Desktop/CC3D/macdeps/gcc-5.3 -r /Users/njetty/Desktop/macdeps/rr-install -v /Users/njetty/Desktop/macdeps/VTK-7.0.0
