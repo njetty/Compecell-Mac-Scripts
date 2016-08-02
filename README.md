@@ -45,6 +45,14 @@ Open Cmake gui from the applications folder and point the source ![Cmake image
 	./CreateDirStruct.sh
 This will create a directory `macdeps` within which it will create `Deps, Deps/Deps, Deps/lib, Deps/player` directories.Copy the `PyQt4` directory from the above steps to the `player` directory
 
+Copy `QtCore, QtGui, QtNetwork, QtOpenGl, QtSvg, QtXml` from the Deps folder in which we have copied and run the scripts earlier 
+
+	cp QtCore.framework/Versions/4/QtCore $HOME/Desktop/macdeps/Deps/Deps
+	cp QtGui.framework/Versions/4/QtGui $HOME/Desktop/macdeps/Deps/Deps
+	cp QtNetwork.framework/Versions/4/QtNetwork $HOME/Desktop/macdeps/Deps/Deps
+	cp QtOpenGl.framework/Versions/4/QtOpenGl $HOME/Desktop/macdeps/Deps/Deps
+	cp QtSvg.framework/Versions/4/QtSvg $HOME/Desktop/macdeps/Deps/Deps
+	cp QtXml.framework/Versions/4/QtXml $HOME/Desktop/macdeps/Deps/Deps
 
 ##### Roadrunner installation
 Download the pylibroadrunner for mac from [sourceforge page](https://sourceforge.net/projects/libroadrunner/files/libroadrunner-1.3/). Unzip the package and run the setup.py
@@ -52,3 +60,4 @@ Open Cmake gui from the applications folder and point the source ![Cmake image
 copy the `roadrunner` directory into the `rr-install/site-packages` ##### Copy the gcc folder to macdeps
 copy the gcc-5.3 from the repository to macdeps.
 ##### Run the build.sh to compile and install
+	./build.sh -s=/Users/njetty/Desktop/CC3D/Compucell3D -p=/Users/njetty/Desktop/CC3D/CC3D_install/CC3D_3.7.5 -d=/Users/njetty/Desktop/CC3D/macdeps/Deps -b=CC3D_3.7.5_MacOSX_10.11 -c=8
