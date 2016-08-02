@@ -1,0 +1,7 @@
+macdeps
+macdeps Deps
+macdeps Deps Deps
+macdeps Deps lib
+macdeps Deps player
+macdeps rr-install
+macdeps rr-install site-packages
