@@ -84,7 +84,10 @@ Copy `libgcc_s.1.dylib, libgomp.1.dylib and libstdc++.6.dylib` from `gcc` to the
 	python setup.py install
 copy the `roadrunner` directory into the `rr-install/site-packages` #### Copy the gcc folder to macdeps
 copy the gcc-5.3 from the repository to macdeps.
-#### Run the build.sh to compile and install
+#### Get the source for the compucell
+Get the source using the following command.
+	git clone https://github.com/CompuCell3D/CompuCell3D.git
+It is important that we download the source using the github as the build script checks for the latest version during the compilation and downloads it from the github if it is not the latest source.#### Run the build.sh to compile and install
 copy the `build.sh` from scripts in the repository to the CC3D directory and run it. The script supports the command line arguments 
 
 The argument list is as following:
@@ -100,3 +103,4 @@ The argument list is as following:
 
 Example command is as below 
 	./build.sh -s=/Users/njetty/Desktop/CC3D/Compucell3D -p=/Users/njetty/Desktop/CC3D/CC3D_install/CC3D_3.7.5 -d=/Users/njetty/Desktop/CC3D/macdeps/Deps -b=CC3D_3.7.5_MacOSX_10.11 -c=8 -g /Users/njetty/Desktop/CC3D/macdeps/gcc-5.3 -r /Users/njetty/Desktop/macdeps/rr-install -v /Users/njetty/Desktop/macdeps/VTK-7.0.0
+Once the installation is completed, we can open the CC3D installation directory in the terminal at run the `./compucell.command` command to run the Compucell.
