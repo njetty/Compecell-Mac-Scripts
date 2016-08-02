@@ -14,7 +14,7 @@ Installing Compucell on Mac is fairly a straight forward process but it does req
 *	Sip
 
 
-All of the above prerequisites with the exception of VTK and Roadrunner can be directly installed from brew. This document also assumes that xcode has been installaed on your Mac as this process extensively uses install-name-tool and otool commands.###### Install Brew
+All of the above prerequisites with the exception of VTK and Roadrunner can be directly installed from brew. This document also assumes that xcode has been installaed on your Mac as this process extensively uses install-name-tool and otool commands.#### Install Brew
 Any installation on Mac typically requires that the user have admin privileges but there is work around to have the brew installed locally on to a non admin user’s home directory on mac. We are going to install brew in a directory called Code in the home folder.
 	cd ~
 	mkdir Code
@@ -27,7 +27,7 @@ Now to be able to use the brew command we should export the bin path to the PATH
 
 This export is local to the terminal and once the terminal is closed it needs to be done again.
 
-##### Install the prerequisites using brew
+#### Install the prerequisites using brew
 
 	brew install qt
 	brew install pyqt
@@ -37,7 +37,7 @@ This export is local to the terminal and once the terminal is closed it needs to
 	brew install cmake
 	brew install swig
 
-##### Install VTK
+#### Install VTK
 VTK is an integral part of Compucell and is not readily available for installation from brew and needs to be compiled using cmake and native compilers. At the time of writing this documentation VTK 7.0.0 is used. The process of installing VTK is as below: Download the source of VTK from here<http://www.vtk.org/download/>. I have used VTK-7.0.0.tar.gz. The source can be uncompressed to a folder called VTK_src by using the following command.	gunzip -c VTK-7.0.0.tar.gz | tar xopft –	mv VTK-7.0.0 VTK_src	mkdir VTK_build
 
 Open Cmake gui from the applications folder and point the source ![Cmake image](/images/vtkcmake.png)
@@ -54,10 +54,10 @@ Copy `QtCore, QtGui, QtNetwork, QtOpenGl, QtSvg, QtXml` from the Deps folder in 
 	cp QtSvg.framework/Versions/4/QtSvg $HOME/Desktop/macdeps/Deps/Deps
 	cp QtXml.framework/Versions/4/QtXml $HOME/Desktop/macdeps/Deps/Deps
 
-##### Roadrunner installation
+#### Roadrunner installation
 Download the pylibroadrunner for mac from [sourceforge page](https://sourceforge.net/projects/libroadrunner/files/libroadrunner-1.3/). Unzip the package and run the setup.py
 	python setup.py install
-copy the `roadrunner` directory into the `rr-install/site-packages` ##### Copy the gcc folder to macdeps
+copy the `roadrunner` directory into the `rr-install/site-packages` #### Copy the gcc folder to macdeps
 copy the gcc-5.3 from the repository to macdeps.
-##### Run the build.sh to compile and install
+#### Run the build.sh to compile and install
 	./build.sh -s=/Users/njetty/Desktop/CC3D/Compucell3D -p=/Users/njetty/Desktop/CC3D/CC3D_install/CC3D_3.7.5 -d=/Users/njetty/Desktop/CC3D/macdeps/Deps -b=CC3D_3.7.5_MacOSX_10.11 -c=8
